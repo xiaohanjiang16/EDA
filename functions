@@ -1,0 +1,8 @@
+def check_null(df,*arg):
+***check number of dataframe rows and column nans***
+    row_num=df.shape[0]
+    print('There are ' + str(row_num) + ' of rows in this dataframe')
+    #arg_list=list(*arg)
+    for entry in arg:
+        na_sum=df_train[entry].isna().sum()
+        print('There are ' + str(na_sum) + ' nan values in ' + entry + ' column')
